@@ -5,16 +5,19 @@ const hacker2 = "Baraba";
 console.log(`The navigator's name is ${hacker2}`);
 
 // Iteration 2: Conditionals
-let isThisNameLonger = 0;
 if (hacker1.length === hacker2.length) {
-  isThisNameLonger = `Wow, you both have equally long names, ${hacker1.length} characters!`;
+  console.log(
+    `Wow, you both have equally long names, ${hacker1.length} characters!`
+  );
 } else if (hacker1.length > hacker2.length) {
-  isThisNameLonger = `The driver has the longest name, it has ${hacker1.length} characters`;
+  console.log(
+    `The driver has the longest name, it has ${hacker1.length} characters`
+  );
 } else {
-  isThisNameLonger = `It seems that the navigator has the longest name, it has XX characters.`;
+  console.log(
+    `It seems that the navigator has the longest name, it has ${hacker2.length} characters.`
+  );
 }
-
-console.log(isThisNameLonger);
 
 // Iteration 3: Loops
 let eachCharacters = "";
