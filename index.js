@@ -20,11 +20,11 @@ if (hacker1.length === hacker2.length) {
 }
 
 // Iteration 3: Loops
-let eachCharacters = "";
+let spacdeName = "";
 for (let i = 0; i < hacker1.length; i++) {
   eachCharacters += (hacker1[i] + " ").toUpperCase();
 }
-console.log(eachCharacters);
+console.log(spacdeName);
 
 // 3.2:
 let reversed = "";
@@ -33,12 +33,7 @@ for (let i = hacker2.length - 1; i >= 0; i--) {
 }
 console.log("hooo", reversed);
 
-// Hereeeee
-// const normalOrder = [hacker1, hacker2];
-// let lexicographicOrder = Array.from(normalOrder[0]).sort();
-// let sortedLexicographicOrder = "";
-// let comparaison = "";
-// let comparaison2 = "";
+// 3.3: Lexicographic order comparison (manual loop solution)
 let result = "";
 for (let i = 0; i < Math.min(hacker1.length, hacker2.length); i++) {
   if (hacker1[i] < hacker2[i]) {
@@ -48,15 +43,9 @@ for (let i = 0; i < Math.min(hacker1.length, hacker2.length); i++) {
     result = "Yo, the navigator goes first, definitely.";
     break;
   }
-  // If characters are equal, continue to next iteration (no else needed)
 }
 
-// If we finished the loop without breaking, all compared characters were equal
-// Now we need to check the lengths to determine the final result
-
-// Learn this
-// console.log(hacker2.localeCompare(hacker1))
-
+// If all compared characters are equal, check string lengths
 if (result === "") {
   if (hacker1.length < hacker2.length) {
     result = "The driver's name goes first.";
@@ -69,8 +58,7 @@ if (result === "") {
 
 console.log("Our result", result);
 
-// Solution without loop
-
+// Alternative solution using localeCompare() method
 if (hacker1.localeCompare(hacker2) < 0) {
   console.log(`${hacker1} The driver's name goes first.`);
 } else if (hacker1.localeCompare(hacker2) > 0) {
