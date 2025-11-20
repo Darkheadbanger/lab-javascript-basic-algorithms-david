@@ -26,10 +26,12 @@ for (let i = 0; i < hacker1.length; i++) {
 }
 console.log(eachCharacters);
 
-let reservedEachCharacters = "";
-for (let i = eachCharacters.length; i >= 0; i--) {
-  reservedEachCharacters += eachCharacters[i] - 1;
+// 3.2:
+let reversed = "";
+for (let i = hacker2.length - 1; i >= 0; i--) {
+  reversed +=  hacker2[i];
 }
+console.log("hooo", reversed);
 
 // Hereeeee
 // const normalOrder = [hacker1, hacker2];
